@@ -1,0 +1,78 @@
+
+body {
+  background: #557174;
+    background-repeat: no-repeat;
+font-family: "Arial", Verdana,
+sans-serif;
+line-height: 1.5;
+/*background-size: cover;
+    background-attachment: scroll;*/
+}
+
+
+.container {
+margin: 0 auto;
+width: 960px;
+}
+
+article {
+background-color: #c7cfb7;
+border: 1px solid #CCC;
+border-color: #CCC #999 #999 #CCC;
+margin-bottom: 20px;
+padding: 10px; /* espaçamento entre a borda e o título */
+}
+
+
+article h2 {
+border-bottom: 1px dashed #7E9F19;
+margin: 0;
+}
+
+article img {
+border: 1px solid #7E9F19;
+float: left;
+margin: 10px 10px 0 0;
+padding: 2px;
+width: 160px;
+height: 160px;
+}
+
+article a { /* mudando a cor dos links para negrito */
+color: #2C88A7;
+font-weight: bold;
+}
+
+header h1 {
+color: #000000;
+text-decoration: none;
+text-align: center;
+}
+
+header h1 :hover { /* mudando a cor do link quando posicionado */
+background-color: #0d335d;
+color: #FFF;
+}
+
+.clear { /* para a imagem nao "ficar fora" quando usa o float */
+clear: both;
+}
+
+footer {
+font-size: 15px;
+text-align: center;
+margin: 25px;
+}
+
+section { /* para a barra lateral lista e titulo */
+float: left;
+width: 660px;
+}
+
+aside {
+background-color: #9dad7f;
+border: 1px solid #f4f5db;
+padding: 10px;
+float: right;
+width: 260px;
+}
