@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+</head>
+<body>
+</body>
+<script>
+	function Aluno() {
+			var nome;
+			var ra;
+
+			this.setNome = function (vNome) {
+				this.nome = vNome;
+			}
+			this.setRa = function (vRa) {
+				this.ra = vRa;
+			}
+			this.getNome = function () {
+				return this.nome;
+			}
+			this.getRa = function () {
+				return this.ra;
+			}
+		}
+		var objAluno = new Aluno();
+		
+		var Aluno2 = new Object(),
+            Nome = "",
+            Ra = "";
+			
+		function Aluno3(Nome, Ra) {
+			this.Nome = Nome;
+			this.Ra = Ra;
+		};
+		var Aluno = new Aluno3("","");
+</script>
