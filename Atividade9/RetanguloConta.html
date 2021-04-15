@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+</head>
+<body>
+</body>
+<script> 
+	function calcArea() {
+		this.Area = this.Base * this.Altura;
+	}
+	function Retangulo(Base, Altura) {
+			this.Base = Base;
+			this.Altura = Altura;
+			var Area = Base * Altura;
+			this.calcArea = function (){
+			return Area;
+			};
+	};
+	
+	var retangulo = new Retangulo(4,8);
+	alert(retangulo.calcArea());
+	
+	
+	
+	
+	function Conta() {
+		var NomeCorrentista;
+		var Banco;
+		var NumConta;
+		var Saldo;
+
+		this.setNomeCorrentista = function (vNomeCorrentista) {
+			NomeCorrentista = vNomeCorrentista;
+		}
+		this.setBanco = function (vBanco) {
+			Banco = vBanco;
+		}
+		this.setNumConta = function (vNumConta) {
+			NumConta = vNumConta;
+		}
+		this.setSaldo = function (vSaldo) {
+			Saldo = vSaldo;
+		}
+		this.getNomeCorrentista = function () {
+			return NomeCorrentista;
+		}
+		this.getBanco = function () {
+			return Banco;
+		}
+		this.getNumConta = function () {
+			return NumConta;
+		}
+		this.getSaldo = function () {
+			return Saldo;
+		}
+	}
+	
+	function ContaCorrente() {
+		var SaldoEspecial;
+
+		this.setSaldoEspecial = function (vSaldoEspecial) {
+			SaldoEspecial = vSaldoEspecial;
+		}
+		this.getSaldoEspecial = function () {
+			return SaldoEspecial;
+		}
+	}
+	function ContaPoupanca() {
+		var Juros;
+
+		this.setJuros = function (vJuros) {
+			Juros = vJuros;
+		}
+		this.getJuros = function () {
+			return Juros;
+		}
+	}
+	
+	ContaCorrente.prototype = new Conta();
+	ContaPoupanca.prototype = new Conta();
+	
+	cc = new ContaCorrente();
+	cc.setNomeCorrentista("Teste");
+	cc.setBanco("TESTE");
+	cc.setNumConta(1010);
+	cc.setSaldo(2020);
+	cc.setSaldoEspecial(3030);
+	
+	cp = new ContaPoupanca();
+	cp.setNomeCorrentista("Teste2");
+	cp.setBanco("TESTE2");
+	cp.setNumConta(1010);
+	cp.setSaldo(2020);
+	cp.setJuros(3030);
+	
+	alert(cc.getNomeCorrentista() + '\n' + cc.getBanco() + '\n' + cc.getNumConta() +'\n' + cc.getSaldo() + '\n' + cc.getSaldoEspecial());
+	alert(cp.getNomeCorrentista() + '\n' + cp.getBanco() + '\n' + cp.getNumConta() + '\n' + cp.getSaldo() + '\n' + cp.getJuros());
+
+</script>
