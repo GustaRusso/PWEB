@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+</head>
+<body  bgcolor="#00a2e8">
+	<form action="teste" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+		Nome:
+		<input name="idNome" type="text" id="idNome" size="52" maxlength="150">
+		<br>
+		<br>
+		<br>
+		Email: 
+		<input name="idEmail" type="text" id="idEmail" size="52" maxlength="150">
+		<br>
+		<br>
+		<br>
+		Comentario:
+		<textarea name="idComentario" cols="50" rows="8" id="idComentario" value="" input></textarea>
+		<br>
+		<div align="center">
+			PESQUISA:
+			<br>
+			<br>
+			Primeira vez nessa pagina?
+			<br>
+			<br>
+			<input id="idSim" name="botao" type="radio" value="1" />
+			Sim
+			<input id="idNao" name="botao" type="radio" value="2" />
+			Não
+			<br>
+			<br>
+			<input name="Enviar" type="submit" value="Enviar">
+			<input name="Limpar" type="reset" value="limpar">
+		</div>
+	</form>
+</body>
+<script src="formulario.js"></script>
